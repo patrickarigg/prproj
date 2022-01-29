@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import requests
-
 
 def try_me():
 
@@ -10,8 +6,8 @@ def try_me():
     response = requests.get(url).json()
     weather = response["consolidated_weather"][0]["weather_state_name"]
 
-    print(f'The weather at Le Wagon today is: {weather}')
+    return f'The weather at Le Wagon today is: {weather}'
 
 
 if __name__ == "__main__":
-    try_me()
+    print(try_me())
